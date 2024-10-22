@@ -1,12 +1,18 @@
 <h1>Flight Booker</h1>
 <p>Book your next dream destination! </p>
 
-<%= form_with url: "/search", method: :get do |form| %>
+<%= form_with url: "/flights", method: :get do |form| %>
   <%= form.label :departure_airport, "Select your departure airport:" %>
   <%= select_tag(:departure_airport, options_for_select(@airport_options)) %>
 
   <%= form.label :arrival_airport, "Select the airport of your destination:" %>
-  <%= select_tag(:arrival_airport, options_for_select(@airport_options, Airport.last.id)) %>
+  <%= select_tag(:arrival_airport, options_for_select(@airport_options, Airport.last.location)) %>
+
+  <%= form.label :flight_date, "Departure date:" %>
+  <%= select_tag(:flight_date, options_for_select(@flight_dates)) %>
+
+  <%= form.label :passenger_number, "No. of passengers:" %>
+  <%= select_tag(:passenger_number, options_for_select([1, 2, 3, 4])) %>
 
   <%= form.submit "Find flights" %>
 <% end %>
@@ -27,5 +33,13 @@
     <p>There are no flights for your search.</p>
   <% end %>
 <% end %>
+
+
+<!-- Remove when not needed anymore -->
+<%= params %>
+
+<%= p @flight_selection.to_a %>
+<br>
+
 
 
