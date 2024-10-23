@@ -14,25 +14,39 @@
   <%= form.label :passenger_number, "No. of passengers:" %>
   <%= select_tag(:passenger_number, options_for_select([1, 2, 3, 4])) %>
 
+
   <%= form.submit "Find flights" %>
 <% end %>
 
 
 <% if params.include?("departure_airport") %>
   <% if @flight_selection.any? %>
-    <% @flight_selection.each do |flight|%>
-      <div class="flight-option">
-        <p>Departure airport: <%= flight.departure_airport.location %> (<%= flight.departure_airport.code %>)</p>
-        <p>Destination: <%= flight.arrival_airport.location %> (<%= flight.arrival_airport.code %>)</p>
-        <p>Departure at: <%= flight.start_datetime %></p>
-        <p>Flight duration: <%= flight.duration_minutes / 60 %> hour(s)</p>
-      </div>
-      <hr>
+    <%= form_with url: new_booking_path , method: :get do |form| %>
+
+      <% @flight_selection.each do |flight|%>
+        <div class="flight-option">
+          <p>Departure airport: <%= flight.departure_airport.location %> (<%= flight.departure_airport.code %>)</p>
+          <p>Destination: <%= flight.arrival_airport.location %> (<%= flight.arrival_airport.code %>)</p>
+          <p>Departure at: <%= flight.start_datetime %></p>
+          <p>Flight duration: <%= flight.duration_minutes / 60 %> hour(s)</p>
+          <%= form.radio_button :flight, flight.id %>
+          <%= form.label :flight , "Select flight", :value => flight.id %>
+        </div>
+        <hr>
+      <% end %>
+      <%= form.hidden_field :passenger_number, value: params[:passenger_number] %>
+      <%= form.submit "Book flight" %>
     <% end %>
+    
   <% else %>
     <p>There are no flights for your search.</p>
   <% end %>
 <% end %>
 
+
+<!-- delete if not required anymore -->
+<br>
+<br>
+<%= params %>
 
 
