@@ -1,0 +1,22 @@
+<h1>Booking confirmation</h1>
+
+<p>You successfully booked the flight below. Please complete the payment in the next 7 days.</p>
+
+<p>From <%= @booking.flight.departure_airport.location %> (<%= @booking.flight.departure_airport.code %>) 
+to <%= @booking.flight.arrival_airport.location %> (<%= @booking.flight.arrival_airport.code %>)
+</p>
+
+<p>Departure: <%= @booking.flight.start_datetime %> </p>
+
+<p>Duration: <%= @booking.flight.duration_minutes / 60 %> hour(s) </p>
+
+<p>Passengers: <%= @booking.number_passengers %></p>
+
+<p>Passenger names: 
+  <ul>
+    <% @booking.passengers.each do |passenger|  %>
+      <li><%= passenger.name %></li>
+    <% end %>
+  </ul>
+</p>
+
