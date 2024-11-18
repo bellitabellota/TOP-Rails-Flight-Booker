@@ -1,0 +1,146 @@
+@import "modern-normalize";
+@import "~/stylesheets/reset";
+
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Bruno+Ace&family=Geist+Mono:wght@100..900&family=Iceberg&family=Nova+Square&family=Pinyon+Script&family=Zen+Dots&display=swap');
+
+/* Global styles */
+body {
+  box-sizing: content-box;
+}
+
+button {
+  border:none;
+  border-radius: 1rem;
+  background-color:#3F8FCC;
+  padding: 4px 10px;
+  color: white;
+}
+
+button:hover {
+  background-color:#1f7cc4;
+  box-sizing: 3px 3px 3px black;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+main {
+  height: 94vmin;
+}
+
+/* Top Bar styles */
+
+.site-name {
+  font-family: "Geist Mono", monospace;
+  font-size: 1rem;
+}
+
+.top-bar {
+  display: flex;
+  place-items: center;
+  padding: 0 10px;
+  height: 6vh;
+}
+
+.icon {
+  height: 2rem;
+  margin-right: 10px;
+}
+
+/* Flights#index styles -- Flight Search Section */
+
+.flight-search {
+  height: 40%;
+}
+
+.sky-img{
+  height: 100%;
+}
+
+.flight-search {
+  position: relative;
+}
+
+.sky-img {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  z-index: -1;
+}
+
+.flight-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flight-search h1 {
+  margin-block: auto;
+  font-size: 2.25rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.623);
+}
+
+.flight-search form {
+  position: absolute;
+  bottom: 1rem;
+}
+
+.flight-search form {
+  display: flex;
+  min-width: 650px;
+  background-color: rgba(255, 255, 255, 0.658);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+
+/* Flights#index styles -- Flight Search Results Section */
+
+.search-result-section {
+  height: 60%;
+  background-color: #1f7dc43d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-result-section form {
+  height: fit-content
+}
+
+.search-results-container {
+  background-color: rgba(255, 255, 255, 0.658);
+  border-radius: 1rem;
+
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1.5rem;
+}
+
+.flight-option {
+  display: flex;
+  width: 45vw;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 5rem;
+}
+
+.flight-option > :first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flight-option > :last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1rem;
+  gap: 0.5rem;
+}
+
+.book-flight-button-container {
+  display: flex;
+  justify-content: center;
+}

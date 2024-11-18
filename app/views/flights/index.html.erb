@@ -1,46 +1,64 @@
-<h1>Flight Booker</h1>
-<p>Book your next dream destination! </p>
-
-<%= form_with url: "/flights", method: :get do |form| %>
-  <%= form.label :departure_airport, "Select your departure airport:" %>
-  <%= select_tag(:departure_airport, options_for_select(@airport_options)) %>
-
-  <%= form.label :arrival_airport, "Select the airport of your destination:" %>
-  <%= select_tag(:arrival_airport, options_for_select(@airport_options, Airport.last.location)) %>
-
-  <%= form.label :flight_date, "Departure date:" %>
-  <%= select_tag(:flight_date, options_for_select(@flight_dates)) %>
-
-  <%= form.label :passenger_number, "No. of passengers:" %>
-  <%= select_tag(:passenger_number, options_for_select([1, 2, 3, 4])) %>
-
-
-  <%= form.submit "Find flights" %>
-<% end %>
-
-
-<% if params.include?("departure_airport") %>
-  <% if @flight_selection.any? %>
-    <%= form_with url: new_booking_path , method: :get do |form| %>
-
-      <% @flight_selection.each do |flight|%>
-        <div class="flight-option">
-          <p>Departure airport: <%= flight.departure_airport.location %> (<%= flight.departure_airport.code %>)</p>
-          <p>Destination: <%= flight.arrival_airport.location %> (<%= flight.arrival_airport.code %>)</p>
-          <p>Departure at: <%= flight.start_datetime %></p>
-          <p>Flight duration: <%= flight.duration_minutes / 60 %> hour(s)</p>
-          <%= form.radio_button :flight, flight.id %>
-          <%= form.label :flight , "Select flight", :value => flight.id %>
-        </div>
-        <hr>
-      <% end %>
-      <%= form.hidden_field :passenger_number, value: params[:passenger_number] %>
-      <%= form.submit "Book flight" %>
-    <% end %>
+<main class="flights-index">
+  <div class="flight-search">
+    <%= image_tag "taylor-van-riper-yQorCngxzwI-unsplash.jpg", class: "sky-img" %>
+    <h1>Book your next dream destination! </h1>
     
-  <% else %>
-    <p>There are no flights for your search.</p>
-  <% end %>
-<% end %>
+    <%= form_with url: "/flights", method: :get do |form| %>
+      <div class="field">
+        <%= form.label :departure_airport, "From:" %>
+        <%= select_tag(:departure_airport, options_for_select(@airport_options)) %>
+      </div>
+    
+      <div class="field">
+        <%= form.label :arrival_airport, "To:" %>
+        <%= select_tag(:arrival_airport, options_for_select(@airport_options, Airport.last.location)) %>
+      </div>
+    
+      <div class="field">
+        <%= form.label :flight_date, "Date:" %>
+        <%= select_tag(:flight_date, options_for_select(@flight_dates)) %>
+      </div>
+    
+      <div class="field">
+        <%= form.label :passenger_number, "No. of passengers:" %>
+        <%= select_tag(:passenger_number, options_for_select([1, 2, 3, 4])) %>
+      </div>
+    
+    
+      <%= form.button "Search", method: :get %>
+    <% end %>
+  </div>
+  
+  <div class="search-result-section">
+    <% if params.include?("departure_airport") %>
+      <% if @flight_selection.any? %>
+        <%= form_with url: new_booking_path , method: :get do |form| %>
+          <div class="search-results-container">
+            <% @flight_selection.each do |flight|%>
+              <div class="flight-option">
+                <div>
+                  <p><%= flight.departure_airport.location %> (<%= flight.departure_airport.code %>) - <%= flight.arrival_airport.location %> (<%= flight.arrival_airport.code %>)</p>
+                  <p>Departure: <%= flight.start_datetime %></p>
+                  <p>Flight duration: <%= flight.duration_minutes / 60 %> hour(s)</p>
+                </div>
+                <div>
+                  <%= form.radio_button :flight, flight.id %>
+                  <%= form.label :flight , "Select flight", :value => flight.id %>
+                </div>
+              </div>
+              <hr>
+            <% end %>
+            <%= form.hidden_field :passenger_number, value: params[:passenger_number] %>
+            <div class="button-container"><%= form.button "Book flight" %></div>
+          </div>
+        <% end %>
+      <% else %>
+        <div class="search-results-container">
+          <p>There are no flights for your search.</p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</main>
 
 
