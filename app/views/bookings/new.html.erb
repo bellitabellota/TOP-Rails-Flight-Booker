@@ -1,32 +1,37 @@
-<h1>Passenger information</h1>
-<p>Please add the passenger information for the selected flight.</p>
-
-<p>From <%= @selected_flight.departure_airport.location %> (<%= @selected_flight.departure_airport.code %>) 
-to <%= @selected_flight.arrival_airport.location %> (<%= @selected_flight.arrival_airport.code %>)
-</p>
-
-<p>Departure: <%= @selected_flight.start_datetime %> </p>
-
-<p>Duration: <%= @selected_flight.duration_minutes / 60 %> hour(s) </p>
-
-<p>Passengers: <%= @selected_number_passengers %></p>
-
-<hr>
-
-<%= form_with model:@booking do |form| %>
-  <%= form.hidden_field :number_passengers, value: @selected_number_passengers %>
-  <%= form.hidden_field :flight_id, value: @selected_flight.id %>
-
-  
-    <%= form.fields_for :passengers do |subform| %>
-
-      <%= subform.label :name, "Name:" %>
-      <%= subform.text_field :name %>
-
-      <%= subform.label :email, "E-Mail:" %>
-      <%= subform.text_field :email%>
+<main class="bookings-new">
+  <div class="card-container">
+    <h1>Passenger information</h1>
+    <p>Please add the passenger information for the selected flight.</p>
+    <br>
+    <p>From <%= @selected_flight.departure_airport.location %> (<%= @selected_flight.departure_airport.code %>)
+    to <%= @selected_flight.arrival_airport.location %> (<%= @selected_flight.arrival_airport.code %>)
+    </p>
+    
+    <p>Departure: <%= @selected_flight.start_datetime %> </p>
+    
+    <p>Duration: <%= @selected_flight.duration_minutes / 60 %> hour(s) </p>
+    
+    <p>Passengers: <%= @selected_number_passengers %></p>
+    <br>
+    
     <hr>
+    
+    <%= form_with model:@booking do |form| %>
+      <%= form.hidden_field :number_passengers, value: @selected_number_passengers %>
+      <%= form.hidden_field :flight_id, value: @selected_flight.id %>
+    
+    
+        <%= form.fields_for :passengers do |subform| %>
+    
+          <%= subform.label :name, "Name:" %>
+          <%= subform.text_field :name %>
+    
+          <%= subform.label :email, "E-Mail:" %>
+          <%= subform.text_field :email%>
+        <hr>
+        <% end %>
+    
+      <div class="button-container"><%= form.button "Finalize Booking" %></div>
     <% end %>
-
-  <%= form.submit "Finalize Booking" %>
-<% end %>
+  </div>
+</main>

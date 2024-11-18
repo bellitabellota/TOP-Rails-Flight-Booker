@@ -24,7 +24,18 @@ button:hover {
 }
 
 main {
-  height: 94vmin;
+  height: 93vmin;
+}
+
+h1 {
+  margin-block: auto;
+  font-size: 2.25rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.623);
+}
+
+.button-container {
+  display: flex;
+  place-content: center;
 }
 
 /* Top Bar styles */
@@ -38,12 +49,16 @@ main {
   display: flex;
   place-items: center;
   padding: 0 10px;
-  height: 6vh;
+  height: 7vh;
 }
 
 .icon {
   height: 2rem;
   margin-right: 10px;
+}
+
+.top-bar button {
+  margin: 0;
 }
 
 /* Flights#index styles -- Flight Search Section */
@@ -72,12 +87,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.flight-search h1 {
-  margin-block: auto;
-  font-size: 2.25rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.623);
 }
 
 .flight-search form {
@@ -143,4 +152,26 @@ main {
 .book-flight-button-container {
   display: flex;
   justify-content: center;
+}
+
+/* Bookings#new styles */
+
+.bookings-new, .bookings-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  background-color: rgba(255, 255, 255, 0.658);
+  border-radius: 1rem;
+
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1.5rem;
+}
+
+.card-container h1 {
+  text-align: center;
+  margin-bottom: 1rem;
 }
