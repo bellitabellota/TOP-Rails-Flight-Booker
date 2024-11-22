@@ -16,6 +16,7 @@ button {
   background-color:#3F8FCC;
   padding: 4px 10px;
   color: white;
+
 }
 
 button:hover {
@@ -38,6 +39,7 @@ h1 {
 .button-container {
   display: flex;
   place-content: center;
+  padding-top: 0.5rem;
 }
 
 /* Top Bar styles */
