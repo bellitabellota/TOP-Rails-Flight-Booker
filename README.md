@@ -1,6 +1,17 @@
+# TOP Project: Flight Booker
+
 ![image](https://github.com/user-attachments/assets/20f14b74-47dc-4e3c-9b55-ba1964d0c2d5)
 
-# TOP Project: Flight Booker
+## Screenshots
+Flights#index page
+![image](https://github.com/user-attachments/assets/dd3e5f8d-ef35-4bf6-8cc5-d52cfa9747c5)
+
+Bookings#new page
+![image](https://github.com/user-attachments/assets/8f9f460a-33c6-4204-b9bd-9e8ff33db133)
+
+Bookings#show page
+![image](https://github.com/user-attachments/assets/4b2ce129-de01-494b-b17f-3323e53f7e5a)
+
 ## Introduction
 In this project, you’ll get a chance to tackle some more advanced forms. This is the kind of thing you’ll have to work with when handling user orders for anything more complicated than an e-book. In this case, we’ll build the first three steps of a typical checkout process for booking a one-way flight:
 
