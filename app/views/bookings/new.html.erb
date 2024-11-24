@@ -1,4 +1,4 @@
-<main class="bookings-new">
+<main class="bookings-new" data-controller="passenger">
   <div class="card-container">
     <h1>Passenger information</h1>
     <p>Please add the passenger information for the selected flight.</p>
@@ -13,7 +13,7 @@
     
     <p>Passengers: <%= @selected_number_passengers %></p>
     <br>
-    
+    <button data-action="passenger#add">Add Passenger</button>
     <hr>
     
     <%= form_with model:@booking do |form| %>
@@ -21,15 +21,32 @@
       <%= form.hidden_field :flight_id, value: @selected_flight.id %>
     
     
-        <%= form.fields_for :passengers do |subform| %>
+        <div data-passenger-target="passengers">
+          <%= form.fields_for :passengers do |subform| %>
+            <div class="passenger-details">
+              <%= subform.label :name, "Name:" %>
+              <%= subform.text_field :name %>
+              <%= subform.label :email, "E-Mail:" %>
+              <%= subform.text_field :email%>
+              <hr>
+            </div>
+          <% end %>
+        </div>
+
+        <template data-passenger-target="source">
+          <%= form.fields_for :passengers, @booking.passengers.build do |subform| %>
     
-          <%= subform.label :name, "Name:" %>
-          <%= subform.text_field :name %>
-    
-          <%= subform.label :email, "E-Mail:" %>
-          <%= subform.text_field :email%>
-        <hr>
+          <div class="passenger-details">
+            <%= subform.label :name, "Name:" %>
+            <%= subform.text_field :name %>
+            <%= subform.label :email, "E-Mail:" %>
+            <%= subform.text_field :email%>
+            <hr>
+          </div>
         <% end %>
+         
+        </template>
+
     
       <div class="button-container"><%= form.button "Finalize Booking" %></div>
     <% end %>
