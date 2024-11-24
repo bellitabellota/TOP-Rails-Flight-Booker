@@ -17,7 +17,6 @@
     <hr>
     
     <%= form_with model:@booking do |form| %>
-      <%= form.hidden_field :number_passengers, value: @selected_number_passengers %>
       <%= form.hidden_field :flight_id, value: @selected_flight.id %>
     
     
