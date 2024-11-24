@@ -11,7 +11,7 @@
     
     <p>Duration: <%= @selected_flight.duration_minutes / 60 %> hour(s) </p>
     
-    <p>Passengers: <%= @selected_number_passengers %></p>
+    <p>Passengers: <span data-passenger-target="passengerNumber"><%= @selected_number_passengers %></span></p>
     <br>
     <button data-action="passenger#add">Add Passenger</button>
     <hr>
