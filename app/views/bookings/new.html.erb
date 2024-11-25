@@ -3,19 +3,24 @@
     <h1>Passenger information</h1>
     <p>Please add the passenger information for the selected flight.</p>
     <br>
-    <p>From <%= @selected_flight.departure_airport.location %> (<%= @selected_flight.departure_airport.code %>)
-    to <%= @selected_flight.arrival_airport.location %> (<%= @selected_flight.arrival_airport.code %>)
-    </p>
+    <div class="selected-flight">
+      <p>From: <strong><%= @selected_flight.departure_airport.location %> (<%= @selected_flight.departure_airport.code %>)</strong> </p>
+      <p>To: <strong><%= @selected_flight.arrival_airport.location %> (<%= @selected_flight.arrival_airport.code %>)</strong>
+      </p>
     
-    <p>Departure: <%= @selected_flight.start_datetime %> </p>
     
-    <p>Duration: <%= @selected_flight.duration_minutes / 60 %> hour(s) </p>
+      <p>Departure: <%= @selected_flight.start_datetime %> </p>
+      
+      <p>Duration: <%= @selected_flight.duration_minutes / 60 %> hour(s) </p>
+      
+      <p>Passengers: <span data-passenger-target="passengerNumber"><%= @selected_number_passengers %></span></p>
     
-    <p>Passengers: <span data-passenger-target="passengerNumber"><%= @selected_number_passengers %></span></p>
-    <br>
+    </div>
 
-    <button data-action="passenger#add">Add Passenger</button> 
-    <button data-action="passenger#remove">Remove Passenger</button>
+    <div class="adjust-passenger-number-buttons">
+      <button data-action="passenger#add">Add Passenger</button>
+      <button data-action="passenger#remove">Remove Passenger</button>
+    </div>
 
     <hr>
     

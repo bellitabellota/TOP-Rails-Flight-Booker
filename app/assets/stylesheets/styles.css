@@ -8,12 +8,14 @@
 /* Global styles */
 * {
   box-sizing: border-box;
+  --primary-blue: #3F8FCC;
+  --primary-container-bg-color: rgba(255, 255, 255, 0.658);
 }
 
 button {
   border:none;
   border-radius: 1rem;
-  background-color:#3F8FCC;
+  background-color: var(--primary-blue);
   padding: 4px 10px;
   color: white;
 
@@ -107,7 +109,7 @@ h1 {
 .flight-search form {
   display: flex;
   min-width: 650px;
-  background-color: rgba(255, 255, 255, 0.658);
+  background-color: var(--primary-container-bg-color);
   justify-content: space-between;
   align-items: center;
   padding: 0.2rem 0.5rem;
@@ -128,7 +130,7 @@ h1 {
 }
 
 .search-results-container {
-  background-color: rgba(255, 255, 255, 0.658);
+  background-color: var(--primary-container-bg-color);
   border-radius: 1rem;
 
   margin-right: auto;
@@ -162,16 +164,17 @@ h1 {
   justify-content: center;
 }
 
-/* Bookings#new styles */
+/* Bookings#new and Bookings#show styles */
 
 .bookings-new, .bookings-show {
+  min-height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .card-container {
-  background-color: rgba(255, 255, 255, 0.658);
+  background-color: var(--primary-container-bg-color);
   border-radius: 1rem;
 
   margin-right: auto;
@@ -182,4 +185,21 @@ h1 {
 .card-container h1 {
   text-align: center;
   margin-bottom: 1rem;
+}
+
+.adjust-passenger-number-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-block: 1.5rem;
+}
+
+.selected-flight {
+  width: fit-content;
+  margin-right:auto;
+  margin-left: auto;
+  border: 3px solid var(--primary-blue);
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
 }
