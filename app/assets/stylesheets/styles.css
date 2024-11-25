@@ -44,6 +44,24 @@ h1 {
   padding-top: 0.5rem;
 }
 
+.photo-credit {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.705);
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.452);
+}
+
+.photo-credit a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.photo-credit a:hover {
+  text-decoration: underline;
+}
+
 /* Top Bar styles */
 
 .site-name {
@@ -171,6 +189,7 @@ h1 {
 }
 
 .bookings-new, .bookings-show {
+  position: relative;
   min-height: fit-content;
   display: flex;
   justify-content: center;
