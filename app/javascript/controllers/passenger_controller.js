@@ -4,8 +4,6 @@ export default class extends Controller {
     static targets =[ "source", "passengers", "passengerNumber"]
 
     add() {
-        console.log("Add passenger")
-        
         let passengerNumber = Number(this.passengerNumberTarget.innerHTML);
         passengerNumber++;
         this.passengerNumberTarget.innerHTML = passengerNumber;
@@ -15,8 +13,13 @@ export default class extends Controller {
     }
 
     remove() {
-        console.log("remove")
         let passengerNumber = Number(this.passengerNumberTarget.innerHTML);
+
+        if (passengerNumber == 1) {
+            alert("You can't remove the last passenger.")
+            return
+        }
+
         passengerNumber--;
         this.passengerNumberTarget.innerHTML = passengerNumber;
 
