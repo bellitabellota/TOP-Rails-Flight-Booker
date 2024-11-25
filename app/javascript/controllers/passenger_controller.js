@@ -6,11 +6,17 @@ export default class extends Controller {
     add() {
         console.log("Add passenger")
         
-        let passengerNumber = Number(this.passengerNumberTarget.innerHTML)
-        passengerNumber++
-        this.passengerNumberTarget.innerHTML = passengerNumber
+        let passengerNumber = Number(this.passengerNumberTarget.innerHTML);
+        passengerNumber++;
+        this.passengerNumberTarget.innerHTML = passengerNumber;
+
         
-        const clone = this.sourceTarget.content.cloneNode(true);
-        this.passengersTarget.append(clone)
+        this.passengersTarget.insertAdjacentHTML("beforeend", this.templateContent);
+    }
+
+    private
+
+    get templateContent() {
+        return this.sourceTarget.innerHTML.replace(/__INDEX__/g, Date.now());
     }
 }

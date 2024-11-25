@@ -33,7 +33,7 @@
         </div>
 
         <template data-passenger-target="source">
-          <%= form.fields_for :passengers, @booking.passengers.build do |subform| %>
+          <%= form.fields_for :passengers, @booking.passengers.build, child_index: "__INDEX__" do |subform| %>
     
           <div class="passenger-details">
             <%= subform.label :name, "Name:" %>
@@ -43,7 +43,6 @@
             <hr>
           </div>
         <% end %>
-         
         </template>
 
     
@@ -51,3 +50,7 @@
     <% end %>
   </div>
 </main>
+
+<script>
+    let clickCounter = 2
+</script>
