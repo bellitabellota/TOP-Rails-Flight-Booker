@@ -71,3 +71,21 @@ Once the user has submitted their chosen flight, it’s time to take their booki
 8. Go to the Booking model and implement the `#accepts_nested_attributes_for` method. See the [Rails API](http://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html) for examples and this [Stack Overflow post on nested attributes and mass assignment](http://stackoverflow.com/questions/18540679/rails-4-accepts-nested-attributes-for-and-mass-assignment) for another.
 9. Once your form is successfully submitted, render the booking’s `#show` page which displays the booking information (flight and passenger information).
 10. Make sure your ticketing flow is working properly. Good work!
+
+
+## TOP Assignment instructions for Sending Confirmation Emails
+
+You’ll be dusting off your Flight Booker project and having it send out a “You have booked your ticket” confirmation email to all Passengers when they are created as part of the booking process. Make sure to send out one email to each Passenger in the Booking, not just one for the whole Booking. (Alternatively, you can use one of your other projects, as long as it has users registering.)
+
+1. Locate and load up the project file.
+2. Do some pushups and jumping jacks. You’ve been spending a bit too much time at the computer lately.
+3. Generate your new mailer with `$ rails generate mailer PassengerMailer`.
+4. Install the [Letter Opener gem](https://github.com/ryanb/letter_opener) to open your emails in the browser instead of sending them in the development environment.
+5. Follow through the steps listed in the [Rails Guide](http://guides.rubyonrails.org/action_mailer_basics.html) to create the action to send the confirmation email.
+6. Build both an `.html.erb` and `.text.erb` version of your ticket confirmation email.
+7. Test that the email sends by creating a new flight booking (`letter_opener` should open it in the browser for you if you’ve set it up properly).
+8. Try out one other trick – call the mailer directly from the Rails Console using something like:
+
+   ```
+   > PassengerMailer.confirmation_email(Passenger.first).deliver_now!
+   ```
