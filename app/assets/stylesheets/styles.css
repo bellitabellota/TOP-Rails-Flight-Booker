@@ -166,6 +166,10 @@ h1 {
 
 /* Bookings#new and Bookings#show styles */
 
+.bookings-new {
+  text-align: center;
+}
+
 .bookings-new, .bookings-show {
   min-height: fit-content;
   display: flex;
@@ -201,5 +205,4 @@ h1 {
   border: 3px solid var(--primary-blue);
   padding: 5px 10px;
   border-radius: 5px;
-  text-align: center;
 }
