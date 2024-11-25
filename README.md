@@ -72,6 +72,11 @@ Once the user has submitted their chosen flight, it’s time to take their booki
 9. Once your form is successfully submitted, render the booking’s `#show` page which displays the booking information (flight and passenger information).
 10. Make sure your ticketing flow is working properly. Good work!
 
+## TOP Assignment instructions for adding/removing additional passengers via Stimulus
+
+1. Add a controller that allows the user to add another passenger by clicking on an “Add passenger” button, which adds another set of fields to enter the passenger details (hint: have a look at the [`<template>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template)).
+2. Allow to remove existing passengers by clicking a “Remove” button, which removes the one set of passenger fields (make sure submissions to the server still works as expected)
+3. Prevent removing the last set of passenger details.
 
 ## TOP Assignment instructions for Sending Confirmation Emails
 
