@@ -1,8 +1,13 @@
-<h1>Hi <%= @user.name %>!</h1>
-<p>
-  You have successfully booked you flight!
+<div class="message-container">
+  <h1>Hi <%= @user.name %>!</h1>
+  <p>You have successfully booked you flight!</p>
 
-  Kick back and relax dreaming of your next trip or visit our <%= link_to "homepage", root_url %> to book another flight.
-</p>
-
-<p>Thanks for flying with us and have a great day!</p>
+  <p>Kick back and relax dreaming of your next trip or visit our <%= link_to "Homepage", root_url %> to book another flight.</p>
+  
+  <p>Thanks for flying with us and have a great day!</p>
+  
+  <div class="logo-sitename-container">
+    <img src="http://localhost:3000/assets/plane-f6b68bd9480fce14cc8bbcbacfa07f076d4b28617a0f7110b3fb73403a1b0466.png" alt="site-logo" class="icon">
+    <p class="site-name">FlightBooker</p>
+  </div>
+</div>
