@@ -7,7 +7,7 @@ Flights#index page
 ![image](https://github.com/user-attachments/assets/dd3e5f8d-ef35-4bf6-8cc5-d52cfa9747c5)
 
 Bookings#new page
-![image](https://github.com/user-attachments/assets/8f9f460a-33c6-4204-b9bd-9e8ff33db133)
+![image](https://github.com/user-attachments/assets/0a4150e0-9651-418c-9280-0153b10313d9)
 
 Bookings#show page
 ![image](https://github.com/user-attachments/assets/4b2ce129-de01-494b-b17f-3323e53f7e5a)
