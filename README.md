@@ -12,6 +12,10 @@ Bookings#new page
 Bookings#show page
 ![image](https://github.com/user-attachments/assets/4b2ce129-de01-494b-b17f-3323e53f7e5a)
 
+Confirmation email
+![image](https://github.com/user-attachments/assets/25290c88-c290-4405-b67e-d43e8050c17b)
+
+
 ## Introduction
 In this project, you’ll get a chance to tackle some more advanced forms. This is the kind of thing you’ll have to work with when handling user orders for anything more complicated than an e-book. In this case, we’ll build the first three steps of a typical checkout process for booking a one-way flight:
 
