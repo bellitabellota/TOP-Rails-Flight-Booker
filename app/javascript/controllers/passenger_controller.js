@@ -14,6 +14,16 @@ export default class extends Controller {
         this.passengersTarget.insertAdjacentHTML("beforeend", this.templateContent);
     }
 
+    remove() {
+        console.log("remove")
+        let passengerNumber = Number(this.passengerNumberTarget.innerHTML);
+        passengerNumber--;
+        this.passengerNumberTarget.innerHTML = passengerNumber;
+
+        const lastChild = this.passengersTarget.lastElementChild;
+        this.passengersTarget.removeChild(lastChild);
+    }
+
     private
 
     get templateContent() {

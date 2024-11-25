@@ -13,7 +13,10 @@
     
     <p>Passengers: <span data-passenger-target="passengerNumber"><%= @selected_number_passengers %></span></p>
     <br>
-    <button data-action="passenger#add">Add Passenger</button>
+
+    <button data-action="passenger#add">Add Passenger</button> 
+    <button data-action="passenger#remove">Remove Passenger</button>
+
     <hr>
     
     <%= form_with model:@booking do |form| %>
@@ -50,7 +53,3 @@
     <% end %>
   </div>
 </main>
-
-<script>
-    let clickCounter = 2
-</script>
