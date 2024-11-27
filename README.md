@@ -16,6 +16,13 @@ Confirmation email
 ![image](https://github.com/user-attachments/assets/25290c88-c290-4405-b67e-d43e8050c17b)
 
 
+To open this project locally on your computer, after cloning the project from git and entering the repository folder the following commands need to be run:
+
+      rails db:migrate
+      
+      rails db:seed
+
+
 ## Introduction
 In this project, you’ll get a chance to tackle some more advanced forms. This is the kind of thing you’ll have to work with when handling user orders for anything more complicated than an e-book. In this case, we’ll build the first three steps of a typical checkout process for booking a one-way flight:
 
