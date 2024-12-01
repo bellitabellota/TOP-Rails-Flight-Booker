@@ -57,3 +57,8 @@ group :test do
 end
 
 gem "letter_opener", group: :development
+
+
+group :development, :test do
+  gem "rspec-rails", "~> 7.0.0"
+end
