@@ -1,0 +1,209 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/bella--1/Desktop/Rails/TOP-Rails-Flight-Booker/spec/system/finalize_booking_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          3,
+          null,
+          3,
+          null,
+          3,
+          3,
+          3,
+          3,
+          3,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/bella--1/Desktop/Rails/TOP-Rails-Flight-Booker/spec/system/selecting_flight_displays_bookings_new_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/bella--1/Desktop/Rails/TOP-Rails-Flight-Booker/app/models/flight.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/bella--1/Desktop/Rails/TOP-Rails-Flight-Booker/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/bella--1/Desktop/Rails/TOP-Rails-Flight-Booker/app/models/airport.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/bella--1/Desktop/Rails/TOP-Rails-Flight-Booker/app/controllers/flights_controller.rb": {
+        "lines": [
+          1,
+          1,
+          26,
+          16,
+          null,
+          6,
+          3,
+          3,
+          3,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/bella--1/Desktop/Rails/TOP-Rails-Flight-Booker/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/home/bella--1/Desktop/Rails/TOP-Rails-Flight-Booker/app/controllers/bookings_controller.rb": {
+        "lines": [
+          1,
+          1,
+          4,
+          4,
+          4,
+          12,
+          null,
+          null,
+          1,
+          3,
+          null,
+          3,
+          3,
+          6,
+          null,
+          null,
+          3,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          3,
+          null,
+          null,
+          1,
+          null,
+          1,
+          3,
+          null,
+          null
+        ]
+      },
+      "/home/bella--1/Desktop/Rails/TOP-Rails-Flight-Booker/app/models/booking.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/home/bella--1/Desktop/Rails/TOP-Rails-Flight-Booker/app/models/passenger_booking.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/bella--1/Desktop/Rails/TOP-Rails-Flight-Booker/app/models/passenger.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/bella--1/Desktop/Rails/TOP-Rails-Flight-Booker/app/mailers/passenger_mailer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          6,
+          6,
+          6,
+          null,
+          null
+        ]
+      },
+      "/home/bella--1/Desktop/Rails/TOP-Rails-Flight-Booker/app/mailers/application_mailer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1733218597
+  }
+}
