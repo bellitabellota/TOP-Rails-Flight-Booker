@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :flight do
     departure_airport
     arrival_airport
-    start_datetime { "2025-10-06 04:20" }
+     start_datetime { "2025-10-06 04:20" }
     duration_minutes { 132 }
   end
 

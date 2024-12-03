@@ -1,6 +1,42 @@
 {
   "RSpec": {
     "coverage": {
+      "/home/bella--1/Desktop/Rails/TOP-Rails-Flight-Booker/spec/system/display_search_results_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/home/bella--1/Desktop/Rails/TOP-Rails-Flight-Booker/spec/system/finalize_booking_spec.rb": {
         "lines": [
           1,
@@ -204,6 +240,6 @@
         ]
       }
     },
-    "timestamp": 1733218597
+    "timestamp": 1733220609
   }
 }
