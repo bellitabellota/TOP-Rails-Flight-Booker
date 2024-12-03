@@ -52,8 +52,6 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
-  gem "selenium-webdriver"
 end
 
 gem "letter_opener", group: :development
@@ -61,4 +59,8 @@ gem "letter_opener", group: :development
 
 group :development, :test do
   gem "rspec-rails", "~> 7.0.0"
+  gem "capybara"
+  gem "selenium-webdriver"
+  gem "webdrivers"
+  gem "factory_bot_rails"
 end
