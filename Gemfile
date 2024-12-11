@@ -59,7 +59,7 @@ gem "letter_opener", group: :development
 
 
 group :development, :test do
-  gem "rspec-rails", "~> 7.0.0"
+  gem "rspec-rails", "~> 7.1.0"
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
